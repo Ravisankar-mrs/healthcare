@@ -22,9 +22,14 @@ import com.slokam.healthcare.Exception.HealthCareException;
 import com.slokam.healthcare.Service.IPatientService;
 import com.slokam.healthcare.entity.Patient;
 import com.slokam.healthcare.pojo.PatientSearchPojo;
+
+//Add logger imports
+
 @RestController
 @RequestMapping("patient")
 public class PatientController {
+	
+	private static final Logger LOGGER=LoggerFactory.getLoagger(PatientController.class);
 	
 	@Autowired
 	private IPatientService patientService;
