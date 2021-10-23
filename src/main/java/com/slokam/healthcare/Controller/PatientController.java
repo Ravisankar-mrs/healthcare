@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -23,13 +25,12 @@ import com.slokam.healthcare.Service.IPatientService;
 import com.slokam.healthcare.entity.Patient;
 import com.slokam.healthcare.pojo.PatientSearchPojo;
 
-//Add logger imports
 
 @RestController
 @RequestMapping("patient")
 public class PatientController {
 	
-	private static final Logger LOGGER=LoggerFactory.getLoagger(PatientController.class);
+	private static final Logger LOGGER=LoggerFactory.getLogger(PatientController.class);
 	
 	@Autowired
 	private IPatientService patientService;
