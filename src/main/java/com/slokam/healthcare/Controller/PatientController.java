@@ -70,7 +70,7 @@ public class PatientController {
 	public ResponseEntity<List<Patient>> patientSearch(@RequestBody PatientSearchPojo searchPojo) {
 		List<Patient> list=  patientService.patientSearchpojo(searchPojo);
 		return ResponseEntity.ok(list);
-	}
+  	}
 	@GetMapping("/all")
 	public ResponseEntity<List<Patient>> getAllPatient() {
 		List<Patient> list=  patientService.getAllPatient();
